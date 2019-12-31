@@ -32,23 +32,33 @@ class FuxinTabsState extends State<FuxinTabs>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(
-        title: TabBar(
-            isScrollable: true,
-            controller: _tabController,
-            labelColor: Colors.white,
-            indicatorColor: Colors.white,
-            unselectedLabelColor: Color(0xffA5BFF6),
-            labelStyle: TextStyle(fontSize: 17.0),
-            tabs: _tabList),
-        backgroundColor: Color(0xFF4D81EF),
+      appBar: AppBar(
+          backgroundColor: Color(0xFF4D81EF),
+          bottom: TabBar(
+              isScrollable: true,
+              controller: _tabController,
+              labelColor: Colors.white,
+              indicatorColor: Colors.white,
+              unselectedLabelColor: Color(0xffA5BFF6),
+              labelStyle: TextStyle(fontSize: 17.0),
+              tabs: _tabList),
+//          title: Center(
+//            child: TabBar(
+//                isScrollable: true,
+//                controller: _tabController,
+//                labelColor: Colors.white,
+//                indicatorColor: Colors.white,
+//                unselectedLabelColor: Color(0xffA5BFF6),
+//                labelStyle: TextStyle(fontSize: 17.0),
+//                tabs: _tabList),
+//          )
       ),
       body: TabBarView(
         controller: _tabController,
         physics: NeverScrollableScrollPhysics(),
-        children:[
-          Center(child:Text('11111')),
-          Center(child:Text('222222')),
+        children: [
+          Center(child: Text('11111')),
+          Center(child: Text('222222')),
         ],
       ),
     );
